@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OpenAutoruns.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="500" d:DesignWidth="1000">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -16,14 +16,14 @@
             Name="ItemList">
             <ListView.View>
                 <GridView AllowsColumnReorder="True">
-                    <GridViewColumn Header="Entry" Width="200">
+                    <GridViewColumn Header="Autorun Entry" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Entry}" TextTrimming="CharacterEllipsis" ToolTip="{Binding Entry}"></TextBlock>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Description" Width="400">
+                    <GridViewColumn Header="Description" Width="200">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Description}" TextTrimming="WordEllipsis" ToolTip="{Binding Description}"></TextBlock>
@@ -37,7 +37,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="ImagePath" Width="450">
+                    <GridViewColumn Header="Image Path" Width="400">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding ImagePath}" TextTrimming="CharacterEllipsis" ToolTip="{Binding ImagePath}"></TextBlock>
