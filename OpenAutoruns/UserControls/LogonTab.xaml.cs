@@ -27,6 +27,7 @@ namespace OpenAutoruns.UserControls
         {
             InitializeComponent();
             Logon.SearchRegLogon(Logon.RegEntries, ref logonRegs);
+            Logon.SearchDirLogon(Logon.StartupDirs, ref logonRegs);
             ItemList.ItemsSource = logonRegs;
             var collectionView = (CollectionView)CollectionViewSource.GetDefaultView(ItemList.ItemsSource);
             collectionView.GroupDescriptions.Clear();

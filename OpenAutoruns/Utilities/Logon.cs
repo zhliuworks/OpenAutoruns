@@ -37,6 +37,31 @@ namespace OpenAutoruns.Utilities
             @"HKCU\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run"
         };
 
+        // Search Startup Directory for Logon        
+        public static void SearchDirLogon(string[] dirs, ref ObservableCollection<Logon> logonRegs)
+        {
+            foreach (string dir in dirs)
+            {
+                // expand environment variables in path
+                string dirPath = Environment.ExpandEnvironmentVariables(dir);
+
+                string[] filePaths = Directory.GetFiles(dirPath);
+                foreach (string filePath in filePaths)
+                {
+                    var logon = new Logon
+                    {
+                        Path = "  " + dirPath,
+                        Entry = System.IO.Path.GetFileName(filePath),
+                        Description = Tool.GetDescription(filePath),
+                        Publisher = Tool.GetPublisher(filePath),
+                        ImagePath = filePath.ToLower(),
+                        TimeStamp = Tool.GetTimeStamp(filePath)
+                    };
+                    logonRegs.Add(logon);
+                }
+            }
+        }
+
         // Search Registry for Logon
         public static void SearchRegLogon(string[] entries, ref ObservableCollection<Logon> logonRegs)
         {
