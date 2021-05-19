@@ -10,7 +10,14 @@
 
 ### Usage
 
-Download the Visual Studio Solution in this repo, and run with your Visual Studio.
+Just download the Visual Studio Solution in this repo, and run with your Visual Studio! 
+
+* **Development Environment**
+  * Windows 10 
+  * Visual Studio 2019
+  * .NET Framework 4.8
+  * .NET Core 3.1
+  * Visual C# WPF App
 
 ### License
 
