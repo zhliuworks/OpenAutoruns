@@ -10,7 +10,7 @@ using System.Windows.Data;
 using Microsoft.Win32;
 
 
-namespace AutorunScanner.Utilities
+namespace OpenAutoruns.Utilities
 {
     /// <summary>
     /// Autorun Record Tool Class

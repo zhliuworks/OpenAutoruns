@@ -8,7 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using Microsoft.Win32;
 
-namespace AutorunScanner.Utilities
+namespace OpenAutoruns.Utilities
 {
     /// <summary>
     /// Autorun based on Startup Directory and Registry
@@ -16,14 +16,14 @@ namespace AutorunScanner.Utilities
     class Logon : Base
     {
         // Startup Directories
-        private static readonly string[] StartupDirs =
+        public static readonly string[] StartupDirs =
         {
             @"%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup",
             @"C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
         };
 
         // Registry Entries Related to Autorun
-        private static readonly string[] RegEntries =
+        public static readonly string[] RegEntries =
         {
             @"HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run",
             @"HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run",
@@ -38,7 +38,7 @@ namespace AutorunScanner.Utilities
         };
 
         // Search Registry for Logon
-        private static void SearchRegLogon(string[] entries, ref ObservableCollection<Logon> logonRegs)
+        public static void SearchRegLogon(string[] entries, ref ObservableCollection<Logon> logonRegs)
         {
             foreach (string entry in entries)
             {
