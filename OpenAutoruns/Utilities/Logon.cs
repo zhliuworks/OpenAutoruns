@@ -64,7 +64,7 @@ namespace OpenAutoruns.Utilities
                         string imagePath = Tool.GetImagePath(valueName, subKey);
                         var logon = new Logon
                         {
-                            Path = entry,
+                            Path = "  " + entry,
                             Entry = valueName,
                             Description = Tool.GetDescription(imagePath),
                             Publisher = Tool.GetPublisher(imagePath),
