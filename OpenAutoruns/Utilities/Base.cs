@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.IO;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using Microsoft.Win32;
 
 namespace OpenAutoruns.Utilities
 {
