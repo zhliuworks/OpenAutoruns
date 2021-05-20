@@ -10,7 +10,7 @@
 - [x] **Logon**: Startup Directories and Registries based Autoruns
 - [x] **Services**: Services based Autoruns
 - [x] **Drivers**: Drivers based Autoruns
-- [ ] **Scheduled Tasks**: Scheduled Tasks based Autoruns
+- [x] **Scheduled Tasks**: Scheduled Tasks based Autoruns
 
 ##### *Optional*
 
@@ -24,6 +24,8 @@
 ### Usage
 
 Just download the Visual Studio Solution in this repo, and run with your Visual Studio! 
+
+Note: Add the reference to `./OpenAutoruns/Utilities/Interop.TaskScheduler.dll` to use the namespace `TaskScheduler`.
 
 * **Development Environment**
   * Windows 10 
