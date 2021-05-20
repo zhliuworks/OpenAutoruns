@@ -3,15 +3,14 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Microsoft.Win32;
 
-
 namespace OpenAutoruns.Utilities
 {
     /// <summary>
-    /// Autorun Record Tool for Driver Information Extraction
+    /// Autorun Record Tool for Services/Drivers Information Extraction
     /// </summary>
-    internal class DriversTool
+    internal class ServicesTool
     {
-        public static string FilterDriverImagePath(string imagePath)
+        public static string FilterImagePath(string imagePath)
         {
             // unify the path to lowercase
             imagePath = imagePath.ToLower();
@@ -36,7 +35,6 @@ namespace OpenAutoruns.Utilities
 
             return imagePath;
         }
-
         public static string GetAllDescription(RegistryKey key, string imagePath)
         {
 
@@ -62,11 +60,57 @@ namespace OpenAutoruns.Utilities
             }
             if (description != null)
             {
-                AllDescription += description + ". ";
+                AllDescription += description + "/ ";
             }
             AllDescription += Tool.GetDescription(imagePath);
 
             return AllDescription;
+        }
+
+        public static string GetStart(RegistryKey key)
+        {
+            switch ((int)key.GetValue("Start"))
+            {
+                case 0:
+                    return "SERVICE_BOOT_START (0)";
+                case 1:
+                    return "SERVICE_SYSTEM_START (1)";
+                case 2:
+                    return "SERVICE_AUTO_START (2)";
+                case 3:
+                    return "SERVICE_DEMAND_START (3)";
+                case 4:
+                    return "SERVICE_DISABLED (4)";
+                default:
+                    return "";
+            }
+        }
+
+        public static string GetType(RegistryKey key)
+        {
+            switch ((int)key.GetValue("Type"))
+            {
+                // Drivers
+                case 1:
+                    return "SERVICE_KERNEL_DRIVER (1)";
+                case 2:
+                    return "SERVICE_FILE_SYSTEM_DRIVER (2)";
+                case 4:
+                    return "SERVICE_ADAPTER (4)";
+                case 8:
+                    return "SERVICE_RECOGNIZER_DRIVER (8)";
+
+                // Services
+                case 16:
+                    return "SERVICE_WIN32_OWN_PROCESS (16)";
+                case 32:
+                    return "SERVICE_WIN32_SHARE_PROCESS (32)";
+                case 256:
+                    return "SERVICE_INTERACTIVE_PROCESS (256)";
+
+                default:
+                    return "";
+            }
         }
     }
 

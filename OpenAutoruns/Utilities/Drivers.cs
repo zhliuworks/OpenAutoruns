@@ -30,15 +30,17 @@ namespace OpenAutoruns.Utilities
                     if (valueNames.Contains("ImagePath"))
                     {
                         string imagePath = (string)subSubKey.GetValue("ImagePath");
-                        imagePath = DriversTool.FilterDriverImagePath(imagePath);
+                        imagePath = ServicesTool.FilterImagePath(imagePath);
 
                         var driver = new Driver
                         {
                             Entry = subKeyName,
-                            Description = DriversTool.GetAllDescription(subSubKey, imagePath),
+                            Description = ServicesTool.GetAllDescription(subSubKey, imagePath),
                             Publisher = Tool.GetPublisher(imagePath),
                             ImagePath = imagePath,
-                            TimeStamp = Tool.GetTimeStamp(imagePath)
+                            TimeStamp = Tool.GetTimeStamp(imagePath),
+                            Start = ServicesTool.GetStart(subSubKey),
+                            Type = ServicesTool.GetType(subSubKey)
                         };
 
                         driverRegs.Add(driver);
@@ -46,5 +48,8 @@ namespace OpenAutoruns.Utilities
                 }
             }
         }
+
+        public string Start { get; set; }
+        public string Type { get; set; }
     }
 }
