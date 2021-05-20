@@ -30,7 +30,7 @@ namespace OpenAutoruns.Utilities
                     if (valueNames.Contains("ImagePath"))
                     {
                         string imagePath = (string)subSubKey.GetValue("ImagePath");
-                        imagePath = ServicesTool.FilterImagePath(imagePath);
+                        imagePath = ServicesTool.FilterImagePath(subSubKey, imagePath, true);
 
                         var driver = new Driver
                         {
