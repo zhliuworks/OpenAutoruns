@@ -48,7 +48,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Type" Width="200">
+                    <GridViewColumn Header="Type" Width="250">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Type}" TextTrimming="CharacterEllipsis" ToolTip="{Binding Type}"></TextBlock>

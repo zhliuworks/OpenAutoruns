@@ -50,15 +50,6 @@
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
-            <ListView.GroupStyle>
-                <GroupStyle>
-                    <GroupStyle.HeaderTemplate>  
-                        <DataTemplate>
-                            <TextBlock Background="#e6e6e6" Foreground="Black" Text="{Binding Name}"/>
-                        </DataTemplate>
-                    </GroupStyle.HeaderTemplate>
-                </GroupStyle>
-            </ListView.GroupStyle>
         </ListView>
     </Grid>
 </UserControl>
