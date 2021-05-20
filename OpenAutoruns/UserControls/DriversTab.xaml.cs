@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+using OpenAutoruns.Utilities;
 
 namespace OpenAutoruns.UserControls
 {
@@ -18,9 +11,13 @@ namespace OpenAutoruns.UserControls
     /// </summary>
     public partial class DriversTab : UserControl
     {
+        ObservableCollection<Driver> driverRegs = new ObservableCollection<Driver>();
+
         public DriversTab()
         {
             InitializeComponent();
+            Driver.SearchRegDrivers(Driver.DriverRegEntry, ref driverRegs);
+            ItemList.ItemsSource = driverRegs;
         }
     }
 }

@@ -14,8 +14,15 @@ namespace OpenAutoruns.Utilities
     {
         public static string GetDescription(string imagePath)
         {
-            FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(imagePath);
-            return fileVersionInfo.FileDescription;
+            try
+            {
+                FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(imagePath);
+                return fileVersionInfo.FileDescription;
+            }
+            catch
+            {
+                return "";
+            }
         }
 
         public static string GetPublisher(string imagePath)
