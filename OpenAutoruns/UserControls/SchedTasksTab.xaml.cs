@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Collections.ObjectModel;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
+using OpenAutoruns.Utilities;
 
 namespace OpenAutoruns.UserControls
 {
@@ -18,9 +10,13 @@ namespace OpenAutoruns.UserControls
     /// </summary>
     public partial class SchedTasksTab : UserControl
     {
+        ObservableCollection<SchedTask> schedTasks = new ObservableCollection<SchedTask>();
+
         public SchedTasksTab()
         {
             InitializeComponent();
+            SchedTask.SearchSchedTasks(ref schedTasks);
+            ItemList.ItemsSource = schedTasks;
         }
     }
 }
