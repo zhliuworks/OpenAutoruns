@@ -23,16 +23,33 @@
 
 ### Usage
 
-Just download the Visual Studio Solution in this repo, and run with your Visual Studio! 
+Just download this repo and open `OpenAutoruns.sln` with your Visual Studio 2019. 
 
-Note: Add the reference to `./OpenAutoruns/Utilities/Interop.TaskScheduler.dll` to use the namespace `TaskScheduler`.
+Welcome to contribute!
 
-* **Development Environment**
-  * Windows 10 
-  * Visual Studio 2019
-  * .NET Framework 4.8
-  * .NET Core 3.1
-  * Visual C# WPF App
+##### *Note*
+
+1. Run Visual Studio as Administrator.
+
+2. About my Development Environment:
+
+   * Windows 10 
+   * Visual Studio 2019
+   * .NET Framework 4.8
+   * .NET Core 3.1
+   * Visual C# WPF App
+
+   So if you have different version of Visual Studio, you may need to create a WPF App from scratch and add all source files.
+
+3. Install `MahApps.Metro` with NuGet Package Manager Console:
+
+   ```
+   PM> Install-Package MahApps.Metro
+   ```
+
+4. Add the reference to `./OpenAutoruns/Utilities/Interop.TaskScheduler.dll` to use the namespace `TaskScheduler`.
+
+5. Also, I've tested on Windows 7 with Visual Studio 2017, [Here](https://github.com/zhliuworks/OpenAutoruns/tree/master/Win7_VS2017) is the source code. There exists a little change due to C# compilation version, such as method `StartsWith` and `Contains`.
 
 ### License
 
