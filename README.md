@@ -17,7 +17,7 @@
 - [ ] **Internet Explorer**: Browser Helper Objects (BHOs) of Internet Explorer based Autoruns
 - [ ] **Boot Execute**: Boot Execute based Autoruns
 - [ ] **Image Hijacks**: Image Hijacks based Autoruns
-- [ ] **Known DLLs**: Known DLLs based Autoruns
+- [x] **Known DLLs**: Known DLLs based Autoruns
 - [ ] **Winsock Providers**: Winsock Service Provider based Autoruns
 - [ ] **Winlogon**: Windows User Logon based Autoruns
 
