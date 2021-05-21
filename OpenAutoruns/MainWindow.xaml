@@ -40,6 +40,12 @@
                      mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
                 <local:SchedTasksTab></local:SchedTasksTab>
             </TabItem>
+            <TabItem Header="KnownDLLs"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:KnownDLLsTab></local:KnownDLLsTab>
+            </TabItem>
         </TabControl>
     </Grid>
 

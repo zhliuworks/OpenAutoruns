@@ -17,6 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Interop.TaskScheduler">
+      <HintPath>Utilities\Interop.TaskScheduler.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Icon.ico" />
   </ItemGroup>
 
