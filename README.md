@@ -14,7 +14,7 @@
 
 ##### *Optional*
 
-- [ ] **Internet Explorer**: Browser Helper Objects (BHOs) of Internet Explorer based Autoruns
+- [x] **Internet Explorer**: Browser Helper Objects (BHOs) of Internet Explorer based Autoruns
 - [ ] **Boot Execute**: Boot Execute based Autoruns
 - [ ] **Image Hijacks**: Image Hijacks based Autoruns
 - [x] **Known DLLs**: Known DLLs based Autoruns
