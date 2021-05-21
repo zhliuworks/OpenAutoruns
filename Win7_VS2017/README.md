@@ -1,4 +1,4 @@
-### OpenAutoruns on Windows 7 with Visual Studio 2017
+## OpenAutoruns on Windows 7 with Visual Studio 2017
 
 <p align="center"><img src="../.imgs/logo.png"/></p>
 
