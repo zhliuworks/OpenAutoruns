@@ -1,0 +1,58 @@
+﻿<mah:MetroWindow x:Class="OpenAutoruns.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:local="clr-namespace:OpenAutoruns.UserControls"
+                 mc:Ignorable="d"
+                 Title="OpenAutoruns - Open Source Autoruns Viewer"
+                 Height="500"
+                 Width="1000"
+                 Icon="Icon.ico"
+                 GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 ResizeMode="CanResizeWithGrip"
+                 WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <TabControl Name="tabs">
+            <TabItem Header="Logon"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:LogonTab></local:LogonTab>
+            </TabItem>
+            <TabItem Header="Services"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:ServicesTab></local:ServicesTab>
+            </TabItem>
+            <TabItem Header="Drivers"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:DriversTab></local:DriversTab>
+            </TabItem>
+            <TabItem Header="Scheduled Tasks"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:SchedTasksTab></local:SchedTasksTab>
+            </TabItem>
+            <TabItem Header="Internet Explorer"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:IEBHOTab></local:IEBHOTab>
+            </TabItem>
+            <TabItem Header="KnownDLLs"
+                     mah:HeaderedControlHelper.HeaderFontSize="18" 
+                     mah:HeaderedControlHelper.HeaderFontWeight="Bold"
+                     mah:HeaderedControlHelper.HeaderHorizontalContentAlignment="Center">
+                <local:KnownDLLsTab></local:KnownDLLsTab>
+            </TabItem>
+        </TabControl>
+    </Grid>
+
+</mah:MetroWindow>
